@@ -40,6 +40,7 @@
 		172BDE43236AB220005AC1C7 = {
 			isa = PBXGroup;
 			children = (
+				172BDE64236AB25B005AC1C7 /* Shared */,
 				172BDE4E236AB220005AC1C7 /* Siam Betta */,
 				172BDE4D236AB220005AC1C7 /* Products */,
 			);
@@ -60,11 +61,18 @@
 				172BDE51236AB220005AC1C7 /* SceneDelegate.swift */,
 				172BDE53236AB220005AC1C7 /* ViewController.swift */,
 				172BDE55236AB220005AC1C7 /* Main.storyboard */,
-				172BDE58236AB225005AC1C7 /* Assets.xcassets */,
 				172BDE5A236AB225005AC1C7 /* LaunchScreen.storyboard */,
 				172BDE5D236AB225005AC1C7 /* Info.plist */,
 			);
 			path = "Siam Betta";
+			sourceTree = "<group>";
+		};
+		172BDE64236AB25B005AC1C7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				172BDE58236AB225005AC1C7 /* Assets.xcassets */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
