@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CameraManager
 
 class PredictVC: UIViewController {
 
@@ -22,8 +23,11 @@ class PredictVC: UIViewController {
     
     var inputImage: UIImage!
     
+    let cameraManager = CameraManager()
+    
     
     @IBOutlet weak var shutterBtn: UIButton!
+    @IBOutlet weak var cameraView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,7 @@ class PredictVC: UIViewController {
     
     func setupCaptureSession() {
            captureSession.sessionPreset = AVCaptureSession.Preset.photo
+
        }
     
     func setupDevice() {
@@ -51,6 +56,10 @@ class PredictVC: UIViewController {
         }
         
         currentCamera = backCamera
+        cameraManager.addPreviewLayerToView(cameraView)
+        cameraManager.shouldEnableTapToFocus = true
+        cameraManager.shouldEnablePinchToZoom = true
+
     }
     
     func setipPreviewLayer() {
@@ -81,8 +90,17 @@ class PredictVC: UIViewController {
     
     
     @IBAction func shutterDidTap(_ sender: Any) {
-        let setting = AVCapturePhotoSettings()
-        photoOutput?.capturePhoto(with: setting, delegate: self)
+//        let setting = AVCapturePhotoSettings()
+//        photoOutput?.capturePhoto(with: setting, delegate: self)
+        cameraManager.capturePictureWithCompletion { (result) in
+            switch result {
+            case .failure:
+                print("error")
+            case .success(let content):
+                self.inputImage = content.asImage
+                self.performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,14 +109,15 @@ class PredictVC: UIViewController {
              imageVC.image = self.inputImage
          }
      }
-    
 }
 
-extension PredictVC: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if let imageData = photo.fileDataRepresentation() {
-            inputImage = UIImage(data: imageData)
-            performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
-        }
-    }
-}
+
+
+//extension PredictVC: AVCapturePhotoCaptureDelegate {
+//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+//        if let imageData = photo.fileDataRepresentation() {
+//            inputImage = UIImage(data: imageData)
+//            performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
+//        }
+//    }
+//}

@@ -74,7 +74,7 @@ class restImageVC: UIViewController {
         let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
         do {
             try handler.perform([classificationRequest])
-            // create a classification request
+            
         } catch {
             print("Fail to perform classification: \(error.localizedDescription)")
         }
@@ -87,13 +87,23 @@ class restImageVC: UIViewController {
     
     @IBAction func useDidTap(_ sender: Any) {
         updateClassification(for: image)
+        //ดักเมื่อใช้รูปที่ไม่ใช่ปลากัด , code comment เพื่อใช้ test
+//        if predictResult == "It's not Betta fish"{
+//            Alert.showAlert(on: self, with: "เกิดข้อผิดพลาด", message: "ไม่พบปลากัด")
+//        } else {
+//            performSegue(withIdentifier: "toPopupDetailFish", sender: self)
+//        }
+//
         performSegue(withIdentifier: "toPopupDetailFish", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var popup = segue.destination as! PopupFishVC
         print("before pass: \(self.predictResult)")
         popup.predictFish = self.predictResult
+        popup.predictPercen = self.predictPercentage
+        popup.takePhotoImage = self.image
     }
     
     

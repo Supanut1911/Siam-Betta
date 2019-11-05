@@ -7,12 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1726E81A236BFCA300F5AB2E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726E819236BFCA300F5AB2E /* Alert.swift */; };
+		1726E81F236D4CAF00F5AB2E /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726E81E236D4CAF00F5AB2E /* UIcolor.swift */; };
+		1726E821236D4D0A00F5AB2E /* setGradintBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726E820236D4D0A00F5AB2E /* setGradintBackground.swift */; };
+		1729B3AC2370133800F0DC5C /* MainDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B3AB2370133800F0DC5C /* MainDetailVC.swift */; };
+		1729B3AE237018BC00F0DC5C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B3AD237018BC00F0DC5C /* Category.swift */; };
+		1729B3B123701A3200F0DC5C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B3AF23701A3200F0DC5C /* CategoryCell.swift */; };
+		1729B3B223701A3200F0DC5C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1729B3B023701A3200F0DC5C /* CategoryCell.xib */; };
 		172BDE50236AB220005AC1C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE4F236AB220005AC1C7 /* AppDelegate.swift */; };
 		172BDE52236AB220005AC1C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE51236AB220005AC1C7 /* SceneDelegate.swift */; };
 		172BDE54236AB220005AC1C7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE53236AB220005AC1C7 /* HomeVC.swift */; };
 		172BDE57236AB220005AC1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE55236AB220005AC1C7 /* Main.storyboard */; };
 		172BDE59236AB225005AC1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE58236AB225005AC1C7 /* Assets.xcassets */; };
 		172BDE5C236AB225005AC1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE5A236AB225005AC1C7 /* LaunchScreen.storyboard */; };
+		173082D1236D6D2C00C3E18B /* Kanit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082BE236D6D2C00C3E18B /* Kanit-ExtraLight.ttf */; };
+		173082D2236D6D2C00C3E18B /* Kanit-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082BF236D6D2C00C3E18B /* Kanit-ThinItalic.ttf */; };
+		173082D3236D6D2C00C3E18B /* Kanit-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C0236D6D2C00C3E18B /* Kanit-BoldItalic.ttf */; };
+		173082D4236D6D2C00C3E18B /* Kanit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C1236D6D2C00C3E18B /* Kanit-SemiBold.ttf */; };
+		173082D5236D6D2C00C3E18B /* Kanit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C2236D6D2C00C3E18B /* Kanit-Black.ttf */; };
+		173082D6236D6D2C00C3E18B /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C3236D6D2C00C3E18B /* Kanit-Regular.ttf */; };
+		173082D7236D6D2C00C3E18B /* Kanit-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C4236D6D2C00C3E18B /* Kanit-Italic.ttf */; };
+		173082D8236D6D2C00C3E18B /* Kanit-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C5236D6D2C00C3E18B /* Kanit-MediumItalic.ttf */; };
+		173082D9236D6D2C00C3E18B /* Kanit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C6236D6D2C00C3E18B /* Kanit-Thin.ttf */; };
+		173082DA236D6D2C00C3E18B /* Kanit-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C7236D6D2C00C3E18B /* Kanit-ExtraBoldItalic.ttf */; };
+		173082DB236D6D2C00C3E18B /* Kanit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C8236D6D2C00C3E18B /* Kanit-ExtraBold.ttf */; };
+		173082DC236D6D2C00C3E18B /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082C9236D6D2C00C3E18B /* Kanit-Bold.ttf */; };
+		173082DD236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CA236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf */; };
+		173082DE236D6D2C00C3E18B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 173082CB236D6D2C00C3E18B /* OFL.txt */; };
+		173082DF236D6D2C00C3E18B /* Kanit-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CC236D6D2C00C3E18B /* Kanit-BlackItalic.ttf */; };
+		173082E0236D6D2C00C3E18B /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CD236D6D2C00C3E18B /* Kanit-Light.ttf */; };
+		173082E1236D6D2C00C3E18B /* Kanit-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CE236D6D2C00C3E18B /* Kanit-LightItalic.ttf */; };
+		173082E2236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CF236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf */; };
+		173082E3236D6D2C00C3E18B /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082D0236D6D2C00C3E18B /* Kanit-Medium.ttf */; };
+		173082E7236D7AF800C3E18B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173082E6236D7AF800C3E18B /* CustomTabBar.swift */; };
 		173479C1236ABC8D00DB73B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 173479C0236ABC8D00DB73B0 /* GoogleService-Info.plist */; };
 		173479C8236AC0F900DB73B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173479C7236AC0F900DB73B0 /* Constants.swift */; };
 		173479CB236AC2C400DB73B0 /* RounderViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173479CA236AC2C400DB73B0 /* RounderViews.swift */; };
@@ -24,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1726E819236BFCA300F5AB2E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		1726E81E236D4CAF00F5AB2E /* UIcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		1726E820236D4D0A00F5AB2E /* setGradintBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setGradintBackground.swift; sourceTree = "<group>"; };
+		1729B3AB2370133800F0DC5C /* MainDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailVC.swift; sourceTree = "<group>"; };
+		1729B3AD237018BC00F0DC5C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1729B3AF23701A3200F0DC5C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		1729B3B023701A3200F0DC5C /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		172BDE4C236AB220005AC1C7 /* Siam Betta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siam Betta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		172BDE4F236AB220005AC1C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172BDE51236AB220005AC1C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +66,26 @@
 		172BDE58236AB225005AC1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172BDE5B236AB225005AC1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		172BDE5D236AB225005AC1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173082BE236D6D2C00C3E18B /* Kanit-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		173082BF236D6D2C00C3E18B /* Kanit-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ThinItalic.ttf"; sourceTree = "<group>"; };
+		173082C0236D6D2C00C3E18B /* Kanit-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BoldItalic.ttf"; sourceTree = "<group>"; };
+		173082C1236D6D2C00C3E18B /* Kanit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBold.ttf"; sourceTree = "<group>"; };
+		173082C2236D6D2C00C3E18B /* Kanit-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Black.ttf"; sourceTree = "<group>"; };
+		173082C3236D6D2C00C3E18B /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		173082C4236D6D2C00C3E18B /* Kanit-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Italic.ttf"; sourceTree = "<group>"; };
+		173082C5236D6D2C00C3E18B /* Kanit-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-MediumItalic.ttf"; sourceTree = "<group>"; };
+		173082C6236D6D2C00C3E18B /* Kanit-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Thin.ttf"; sourceTree = "<group>"; };
+		173082C7236D6D2C00C3E18B /* Kanit-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		173082C8236D6D2C00C3E18B /* Kanit-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		173082C9236D6D2C00C3E18B /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
+		173082CA236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		173082CB236D6D2C00C3E18B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		173082CC236D6D2C00C3E18B /* Kanit-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BlackItalic.ttf"; sourceTree = "<group>"; };
+		173082CD236D6D2C00C3E18B /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
+		173082CE236D6D2C00C3E18B /* Kanit-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-LightItalic.ttf"; sourceTree = "<group>"; };
+		173082CF236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		173082D0236D6D2C00C3E18B /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
+		173082E6236D7AF800C3E18B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		173479C0236ABC8D00DB73B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		173479C7236AC0F900DB73B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		173479CA236AC2C400DB73B0 /* RounderViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RounderViews.swift; sourceTree = "<group>"; };
@@ -62,6 +116,24 @@
 				68D6B9CBD2124D8057F028F5 /* Pods_Siam_Betta.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1726E81D236D4C9300F5AB2E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1726E81E236D4CAF00F5AB2E /* UIcolor.swift */,
+				1726E820236D4D0A00F5AB2E /* setGradintBackground.swift */,
+				173082E6236D7AF800C3E18B /* CustomTabBar.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1729B3AA237012EE00F0DC5C /* FullDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				1729B3AB2370133800F0DC5C /* MainDetailVC.swift */,
+			);
+			path = FullDetailPage;
 			sourceTree = "<group>";
 		};
 		172BDE43236AB220005AC1C7 = {
@@ -102,6 +174,8 @@
 		172BDE64236AB25B005AC1C7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				173082BC236D6D0300C3E18B /* fonts */,
+				1726E81D236D4C9300F5AB2E /* Helper */,
 				173479C9236AC2B900DB73B0 /* view */,
 				173479C6236AC02900DB73B0 /* utils */,
 				172BDE58236AB225005AC1C7 /* Assets.xcassets */,
@@ -109,11 +183,46 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		173082BC236D6D0300C3E18B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				173082BD236D6D2C00C3E18B /* Kanit */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		173082BD236D6D2C00C3E18B /* Kanit */ = {
+			isa = PBXGroup;
+			children = (
+				173082BE236D6D2C00C3E18B /* Kanit-ExtraLight.ttf */,
+				173082BF236D6D2C00C3E18B /* Kanit-ThinItalic.ttf */,
+				173082C0236D6D2C00C3E18B /* Kanit-BoldItalic.ttf */,
+				173082C1236D6D2C00C3E18B /* Kanit-SemiBold.ttf */,
+				173082C2236D6D2C00C3E18B /* Kanit-Black.ttf */,
+				173082C3236D6D2C00C3E18B /* Kanit-Regular.ttf */,
+				173082C4236D6D2C00C3E18B /* Kanit-Italic.ttf */,
+				173082C5236D6D2C00C3E18B /* Kanit-MediumItalic.ttf */,
+				173082C6236D6D2C00C3E18B /* Kanit-Thin.ttf */,
+				173082C7236D6D2C00C3E18B /* Kanit-ExtraBoldItalic.ttf */,
+				173082C8236D6D2C00C3E18B /* Kanit-ExtraBold.ttf */,
+				173082C9236D6D2C00C3E18B /* Kanit-Bold.ttf */,
+				173082CA236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf */,
+				173082CB236D6D2C00C3E18B /* OFL.txt */,
+				173082CC236D6D2C00C3E18B /* Kanit-BlackItalic.ttf */,
+				173082CD236D6D2C00C3E18B /* Kanit-Light.ttf */,
+				173082CE236D6D2C00C3E18B /* Kanit-LightItalic.ttf */,
+				173082CF236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf */,
+				173082D0236D6D2C00C3E18B /* Kanit-Medium.ttf */,
+			);
+			path = Kanit;
+			sourceTree = SOURCE_ROOT;
+		};
 		173479C2236ABEE000DB73B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				172BDE53236AB220005AC1C7 /* HomeVC.swift */,
 				173479CC236AFB3400DB73B0 /* PredictPage */,
+				1729B3AA237012EE00F0DC5C /* FullDetailPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +237,7 @@
 		173479C4236ABEF700DB73B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1729B3AD237018BC00F0DC5C /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				173479C7236AC0F900DB73B0 /* Constants.swift */,
+				1726E819236BFCA300F5AB2E /* Alert.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -153,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				173479CA236AC2C400DB73B0 /* RounderViews.swift */,
+				1729B3AF23701A3200F0DC5C /* CategoryCell.swift */,
+				1729B3B023701A3200F0DC5C /* CategoryCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -236,10 +349,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173082DA236D6D2C00C3E18B /* Kanit-ExtraBoldItalic.ttf in Resources */,
+				173082D1236D6D2C00C3E18B /* Kanit-ExtraLight.ttf in Resources */,
+				173082DD236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf in Resources */,
+				173082E0236D6D2C00C3E18B /* Kanit-Light.ttf in Resources */,
+				173082E3236D6D2C00C3E18B /* Kanit-Medium.ttf in Resources */,
+				173082D8236D6D2C00C3E18B /* Kanit-MediumItalic.ttf in Resources */,
+				173082D7236D6D2C00C3E18B /* Kanit-Italic.ttf in Resources */,
+				1729B3B223701A3200F0DC5C /* CategoryCell.xib in Resources */,
+				173082E1236D6D2C00C3E18B /* Kanit-LightItalic.ttf in Resources */,
+				173082DF236D6D2C00C3E18B /* Kanit-BlackItalic.ttf in Resources */,
+				173082E2236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf in Resources */,
+				173082D4236D6D2C00C3E18B /* Kanit-SemiBold.ttf in Resources */,
 				172BDE5C236AB225005AC1C7 /* LaunchScreen.storyboard in Resources */,
+				173082DB236D6D2C00C3E18B /* Kanit-ExtraBold.ttf in Resources */,
+				173082D5236D6D2C00C3E18B /* Kanit-Black.ttf in Resources */,
 				172BDE59236AB225005AC1C7 /* Assets.xcassets in Resources */,
+				173082D6236D6D2C00C3E18B /* Kanit-Regular.ttf in Resources */,
+				173082D9236D6D2C00C3E18B /* Kanit-Thin.ttf in Resources */,
+				173082DE236D6D2C00C3E18B /* OFL.txt in Resources */,
+				173082D2236D6D2C00C3E18B /* Kanit-ThinItalic.ttf in Resources */,
+				173082D3236D6D2C00C3E18B /* Kanit-BoldItalic.ttf in Resources */,
 				172BDE57236AB220005AC1C7 /* Main.storyboard in Resources */,
 				173479C1236ABC8D00DB73B0 /* GoogleService-Info.plist in Resources */,
+				173082DC236D6D2C00C3E18B /* Kanit-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +425,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1726E81F236D4CAF00F5AB2E /* UIcolor.swift in Sources */,
 				172BDE54236AB220005AC1C7 /* HomeVC.swift in Sources */,
 				172BDE50236AB220005AC1C7 /* AppDelegate.swift in Sources */,
+				173082E7236D7AF800C3E18B /* CustomTabBar.swift in Sources */,
 				172BDE52236AB220005AC1C7 /* SceneDelegate.swift in Sources */,
 				173479D2236B095B00DB73B0 /* PopupFishVC.swift in Sources */,
 				173479C8236AC0F900DB73B0 /* Constants.swift in Sources */,
 				173479CE236AFB4E00DB73B0 /* PredictVC.swift in Sources */,
+				1729B3AC2370133800F0DC5C /* MainDetailVC.swift in Sources */,
 				173479CB236AC2C400DB73B0 /* RounderViews.swift in Sources */,
 				173479D0236AFCF000DB73B0 /* restImageVC.swift in Sources */,
+				1729B3B123701A3200F0DC5C /* CategoryCell.swift in Sources */,
+				1729B3AE237018BC00F0DC5C /* Category.swift in Sources */,
+				1726E81A236BFCA300F5AB2E /* Alert.swift in Sources */,
+				1726E821236D4D0A00F5AB2E /* setGradintBackground.swift in Sources */,
 				173479D4236B1DF300DB73B0 /* Visionmodel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

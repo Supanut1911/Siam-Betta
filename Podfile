@@ -10,6 +10,7 @@ def shared_pods
 	pod 'Firebase/Functions'
 	pod 'IQKeyboardManagerSwift'
 	pod 'Kingfisher'
+  pod 'CameraManager'
 end
 
 

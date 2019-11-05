@@ -66,5 +66,11 @@
 	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Kanit-Regular.ttf</string>
+		<string>Kanit-BoldItalic.ttf</string>
+		<string>Kanit-Light.ttf</string>
+	</array>
 </dict>
 </plist>
