@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class MainDetailVC: UIViewController {
     
     
     //var
     var categories = [Category]()
-    
+//    var documentDocs = [DiscoveryDoc]()
+    var selectCategory: Category!
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -23,10 +25,41 @@ class MainDetailVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let category = Category.init(name: "halfmoon", id: "777", imgUrl: "https://www.petstock.com.au/images/cache/product_feature/images/products/5c3437611b41b5.08627595.jpeg")
-        categories.append(category)
+//        let category = Category.init(name: "halfmoon", imgUrl: "https://www.petstock.com.au/images/cache/product_feature/images/products/5c3437611b41b5.08627595.jpeg")
+//        categories.append(category)
         
         collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+        
+//        fetchDoucument()
+        fetchCollection()
+    }
+    
+//    func fetchDoucument() {
+//        let docRef = Firestore.firestore().collection("discovery").document("Halfmoon")
+//        docRef.getDocument { (snap, error) in
+//            guard let data = snap?.data() else {return}
+//            let newCategory = Category.init(data: data)
+//            self.categories.append(newCategory)
+//            self.collectionView.reloadData()
+//        }
+//    }
+//
+    func fetchCollection() {
+        let collectionRef = Firestore.firestore().collection("discovery")
+        collectionRef.getDocuments { (snap, error) in
+            guard let documents = snap?.documents else {return}
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+                self.collectionView.reloadData()
+            }
+            
+        }
+    }
+    
+    func setupQuery() {
+        
     }
     
 
@@ -55,6 +88,39 @@ extension MainDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         print("width=\(cellWidth) , \(cellHeight)" )
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        selectCategory = categories[indexPath.item]
+//        performSegue(withIdentifier: "toEachFishSegue", sender: self)
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = mainStoryboard.instantiateViewController(identifier: "EachFishVC") as! EachFishVC
+        
+        desVC.image = categories[indexPath.row].imgUrl
+        desVC.fishName = categories[indexPath.row].name
+        desVC.detail = categories[indexPath.row].detail
+        desVC.bodyImageUrl = categories[indexPath.row].bodyImageUrl
+        desVC.bodyDetail = categories[indexPath.row].bodyDetail
+        
+        desVC.backFinImageUrl = categories[indexPath.row].backFinImage
+        
+        desVC.chestFinImageUrl = categories[indexPath.row].chestFinImage
+        
+        desVC.paunchFinImageUrl = categories[indexPath.row].paunchFinImage
+        
+        desVC.tailFinImageUrl = categories[indexPath.row].backFinImage
+        
+        print("do \(indexPath.row)")
+        self.navigationController?.pushViewController(desVC, animated: true)
+        present(desVC, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEachFishSegue" {
+            if let destination = segue.destination as? EachFishVC {
+                destination.category = selectCategory
+            }
+        }
     }
 
 }

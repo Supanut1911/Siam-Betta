@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CameraManager
 
-class PredictVC: UIViewController {
+class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Var
     var captureSession = AVCaptureSession()
@@ -103,21 +103,49 @@ class PredictVC: UIViewController {
         }
     }
     
+    @IBAction func pickImageDidTap(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            self.performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
+        }
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "toRestPhotoSegue" {
              let imageVC = segue.destination as! restImageVC
              imageVC.image = self.inputImage
          }
      }
+    
 }
 
-
-
-//extension PredictVC: AVCapturePhotoCaptureDelegate {
-//    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-//        if let imageData = photo.fileDataRepresentation() {
-//            inputImage = UIImage(data: imageData)
-//            performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
-//        }
+//extension PredictVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func showImagePickerController() {
+//        let imagePickerController = UIImagePickerController()
+//        imagePickerController.delegate = self
+//        present(imagePickerController, animated: true, completion: nil)
+//    }
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let image = info[.editedImage] as? UIImage
+//        self.performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
 //    }
 //}
+
+
+
+
+
+
+

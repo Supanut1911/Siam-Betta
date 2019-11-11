@@ -16,6 +16,8 @@ extension UIColor {
     static let LightPink = UIColor(hex: 0xea6998)
     static let LightViolet = UIColor(hex: 0x8d91dd)
     static let LightOrange = UIColor(hex: 0xf5a373)
+    static let DarkViolet = UIColor(hex: 0x5B2C6F )
+    static let DarkYellow = UIColor(hex: 0xFFC300 )
     
     convenience init(red: Int, green: Int, blue: Int, a:CGFloat = 1.0) {
         self.init(
