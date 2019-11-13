@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
 //        UITabBar.appearance().barTintColor = UIColor.Offwhite
-        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 2) as Date)
+//        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 2) as Date)
         UITabBar.appearance().tintColor = UIColor.OceanBlue
         return true
     }

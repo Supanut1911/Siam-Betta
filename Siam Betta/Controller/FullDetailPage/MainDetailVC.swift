@@ -57,14 +57,6 @@ class MainDetailVC: UIViewController {
             
         }
     }
-    
-    func setupQuery() {
-        
-    }
-    
-
-   
-
 }
 
 extension MainDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
@@ -85,7 +77,7 @@ extension MainDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let width = view.frame.width
         let cellWidth = (width - 50) / 2
         let cellHeight = cellWidth * 1.5
-        print("width=\(cellWidth) , \(cellHeight)" )
+//        print("width=\(cellWidth) , \(cellHeight)" )
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
@@ -99,18 +91,19 @@ extension MainDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         desVC.image = categories[indexPath.row].imgUrl
         desVC.fishName = categories[indexPath.row].name
         desVC.detail = categories[indexPath.row].detail
+        
         desVC.bodyImageUrl = categories[indexPath.row].bodyImageUrl
         desVC.bodyDetail = categories[indexPath.row].bodyDetail
         
         desVC.backFinImageUrl = categories[indexPath.row].backFinImage
-        
-        desVC.chestFinImageUrl = categories[indexPath.row].chestFinImage
-        
+        desVC.backFinDetail = categories[indexPath.row].backFinDetail
+    
         desVC.paunchFinImageUrl = categories[indexPath.row].paunchFinImage
+        desVC.paunchFinDetail = categories[indexPath.row].paunchFinDetail
         
-        desVC.tailFinImageUrl = categories[indexPath.row].backFinImage
+        desVC.tailFinImageUrl = categories[indexPath.row].tailFinImage
+        desVC.tailFinDetail = categories[indexPath.row].tailFinDetail
         
-        print("do \(indexPath.row)")
         self.navigationController?.pushViewController(desVC, animated: true)
         present(desVC, animated: true, completion: nil)
     }

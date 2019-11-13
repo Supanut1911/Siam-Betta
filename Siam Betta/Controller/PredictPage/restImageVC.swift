@@ -14,8 +14,15 @@ class restImageVC: UIViewController {
 
     //var
     var image: UIImage!
+    var myResult = [String]()
+    var myPercen = [Double]()
     var predictResult: String = ""
+    var secPredictResult: String = ""
     var predictPercentage: Double = 0.0
+    var topClassificationsFish = ""
+    var secClassificationsFish = ""
+    var topPercen = 0.0
+    var secPercen = 0.0
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -52,14 +59,31 @@ class restImageVC: UIViewController {
             
         } else {
             let topClassifications = classification.prefix(1)
+            let secClassifications = classification.prefix(2)
             let descriptions = topClassifications.map { classification -> String in
 //                print("-------->\(classification.identifier)")
                 predictResult = classification.identifier
+                
+                print(">>>>> \(secPredictResult)")
                 predictPercentage = Double(classification.confidence * 100)
                 print("-------->\(predictResult), \(predictPercentage)")
                 return String(format: "%.2f", classification.confidence * 100) + "% - " + classification.identifier
             }
             
+            let x = secClassifications.map { (classification) -> String in
+                secPredictResult = classification.identifier
+                myResult.append(classification.identifier)
+//                let confidencee = Double(classification.confidence * 100)
+                myPercen.append(Double(classification.confidence))
+                return ""
+            }
+            
+            self.topClassificationsFish = myResult[0]
+            self.secClassificationsFish = myResult[1]
+            self.topPercen = myPercen[0]
+            self.secPercen = myPercen[1]
+            
+            print("1st: \(topPercen) , 2nd: \(secPercen)")
             
         }
     }
@@ -88,13 +112,13 @@ class restImageVC: UIViewController {
     @IBAction func useDidTap(_ sender: Any) {
         updateClassification(for: image)
         //ดักเมื่อใช้รูปที่ไม่ใช่ปลากัด , code comment เพื่อใช้ test
-//        if predictResult == "It's not Betta fish"{
-//            Alert.showAlert(on: self, with: "เกิดข้อผิดพลาด", message: "ไม่พบปลากัด")
-//        } else {
-//            performSegue(withIdentifier: "toPopupDetailFish", sender: self)
-//        }
-//
-        performSegue(withIdentifier: "toPopupDetailFish", sender: self)
+        if predictResult == "It's not Betta fish"{
+            Alert.showAlert(on: self, with: "เกิดข้อผิดพลาด", message: "ไม่พบปลากัด")
+        } else {
+            performSegue(withIdentifier: "toPopupDetailFish", sender: self)
+        }
+
+//        performSegue(withIdentifier: "toPopupDetailFish", sender: self)
         
     }
     
@@ -104,7 +128,7 @@ class restImageVC: UIViewController {
         popup.predictFish = self.predictResult
         popup.predictPercen = self.predictPercentage
         popup.takePhotoImage = self.image
+        popup.secPredictFish = self.secClassificationsFish
+        popup.secPredictPercen = self.secPercen
     }
-    
-    
 }

@@ -14,7 +14,11 @@ import Kingfisher
 class PopupFishVC: UIViewController {
 
     var predictFish: String = "defalut text"
+    var secPredictFish: String = ""
+    
     var predictPercen: Double = 0.0
+    var secPredictPercen: Double = 0.0
+    
     var takePhotoImage: UIImage!
     
     var imageFirebase: String = ""
@@ -23,14 +27,24 @@ class PopupFishVC: UIViewController {
     
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var predictLabel: UILabel!
-    @IBOutlet weak var confidenceLabel: UILabel!
+    
+    
+    @IBOutlet weak var topFishName: UILabel!
+    @IBOutlet weak var topConfidenceLabel: UILabel!
+    
+    
+    @IBOutlet weak var secFishName: UILabel!
+    @IBOutlet weak var secConfidenceLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var imageFromTaking: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var fulldetailBtnView: UIView!
+    
     @IBOutlet weak var descriptionFishDetailView: UIView!
     
     
-    @IBOutlet weak var predictFX: UIVisualEffectView!
+    
     @IBOutlet weak var predictView: UIView!
     //    @IBOutlet weak var imageFirebaseView: UIImageView!
     
@@ -50,16 +64,15 @@ class PopupFishVC: UIViewController {
     }
     
     func setUp() {
-//        self.testColorView.setGradientBackground(colorOne: UIColor.Orange, colorTwo: UIColor.OceanBlue)
         self.bgView.setGradientBackground(colorOne: UIColor.OceanBlue, colorTwo: UIColor.LightOrange)
         predictLabel.text = predictFish
-//        setRoundedImg()
+        topFishName.text = predictFish
+        secFishName.text = secPredictFish
         imageFromTaking.image = takePhotoImage
-        confidenceLabel.text = String(predictPercen)
-//        if let url = URL(string: imageFirebase) {
-//            imageFirebaseView.kf.setImage(with: url)
-//        }
-        
+        topConfidenceLabel.text = String(round(predictPercen))
+        print("value : \(secPredictPercen)")
+        secConfidenceLabel.text = String(round(secPredictPercen))
+
         setupView()
     }
     
@@ -78,15 +91,6 @@ class PopupFishVC: UIViewController {
         descriptionFishDetailView.layer.shadowOffset = CGSize.zero
         descriptionFishDetailView.layer.shadowRadius = 4
 
-
-        fulldetailBtnView.layer.cornerRadius = 30
-        fulldetailBtnView.layer.shadowColor = UIColor.black.cgColor
-        fulldetailBtnView.layer.shadowOpacity = 0.4
-        fulldetailBtnView.layer.shadowOffset = CGSize.zero
-        fulldetailBtnView.layer.shadowRadius = 4
-        
-        
-        
     }
     
     private func setRoundedImg() {
@@ -99,17 +103,69 @@ class PopupFishVC: UIViewController {
     
     
     func fetchDocument() {
-        if self.predictFish == "It's not Betta fish" {
-            let docRef = db.collection("categories").document("Halfmoon")
+        //case 1 - bigear
+        if self.predictFish == "BigearBetta" {
+            let docRef = db.collection("categories").document("BigearBetta")
             docRef.getDocument { (snap, error) in
                 guard let data = snap?.data() else {return}
-                let name = data["name"] as! String ?? ""
-                let imageUrl = data["imageUrl"] as! String ?? ""
-                print(imageUrl)
-                self.imageFirebase = imageUrl
+                let detail = data["detail"] as! String ?? ""
+//                let imageUrl = data["imageUrl"] as! String ?? ""
+//                print(imageUrl)
+//                self.imageFirebase = imageUrl
+                self.detailLabel.text = detail
             }
         }
         
+        //case 2 - crowntail
+        else if self.predictFish == "CrowntailBetta" {
+            let docRef = db.collection("categories").document("CrownTail")
+            docRef.getDocument { (snap, error) in
+                guard let data = snap?.data() else {return}
+                let detail = data["detail"] as! String ?? ""
+                self.detailLabel.text = detail
+            }
+        }
+        
+        //case 3 - doubletail
+        else if self.predictFish == "DoubletailBetta" {
+            let docRef = db.collection("categories").document("DoubleTail")
+            docRef.getDocument { (snap, error) in
+                guard let data = snap?.data() else {return}
+                let detail = data["detail"] as! String ?? ""
+                self.detailLabel.text = detail
+            }
+        }
+        
+        //case 4 - halfmoon
+        else if self.predictFish == "HalfmoonBetta" {
+            let docRef = db.collection("categories").document("Halfmoon")
+            docRef.getDocument { (snap, error) in
+                guard let data = snap?.data() else {return}
+                let detail = data["detail"] as! String ?? ""
+                self.detailLabel.text = detail
+            }
+        }
+        
+        //case 5 - viltail
+        else if self.predictFish == "ViltailBetta" {
+            let docRef = db.collection("categories").document("Viltail")
+            docRef.getDocument { (snap, error) in
+                guard let data = snap?.data() else {return}
+                let detail = data["detail"] as! String ?? ""
+                self.detailLabel.text = detail
+            }
+        }
+            
+        //case 6 - wild
+        else if self.predictFish == "WildBetta" {
+            let docRef = db.collection("categories").document("WildBetta")
+            docRef.getDocument { (snap, error) in
+                guard let data = snap?.data() else {return}
+                let detail = data["detail"] as! String ?? ""
+                self.detailLabel.text = detail
+            }
+        }
+            
         else {
             print("not feteching")
         }
@@ -120,8 +176,5 @@ class PopupFishVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
-    @IBAction func goFullDetailBtn(_ sender: Any) {
-        print("go full detail")
-    }
+    
 }
