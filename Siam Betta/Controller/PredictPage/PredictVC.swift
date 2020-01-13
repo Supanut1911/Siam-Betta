@@ -90,8 +90,6 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     
     @IBAction func shutterDidTap(_ sender: Any) {
-//        let setting = AVCapturePhotoSettings()
-//        photoOutput?.capturePhoto(with: setting, delegate: self)
         cameraManager.capturePictureWithCompletion { (result) in
             switch result {
             case .failure:
@@ -130,18 +128,6 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
 }
 
-//extension PredictVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func showImagePickerController() {
-//        let imagePickerController = UIImagePickerController()
-//        imagePickerController.delegate = self
-//        present(imagePickerController, animated: true, completion: nil)
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = info[.editedImage] as? UIImage
-//        self.performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
-//    }
-//}
 
 
 

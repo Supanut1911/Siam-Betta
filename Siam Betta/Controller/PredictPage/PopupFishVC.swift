@@ -43,10 +43,7 @@ class PopupFishVC: UIViewController {
     
     @IBOutlet weak var descriptionFishDetailView: UIView!
     
-    
-    
     @IBOutlet weak var predictView: UIView!
-    //    @IBOutlet weak var imageFirebaseView: UIImageView!
     
     @IBOutlet weak var bgView: UIImageView!
     override func viewDidLoad() {
@@ -69,9 +66,10 @@ class PopupFishVC: UIViewController {
         topFishName.text = predictFish
         secFishName.text = secPredictFish
         imageFromTaking.image = takePhotoImage
-        topConfidenceLabel.text = String(round(predictPercen))
-        print("value : \(secPredictPercen)")
-        secConfidenceLabel.text = String(round(secPredictPercen))
+        topConfidenceLabel.text = String(format: "%.2f",predictPercen)
+            
+        secConfidenceLabel.text = String(format: "%.2f",secPredictPercen * 100)
+
 
         setupView()
     }

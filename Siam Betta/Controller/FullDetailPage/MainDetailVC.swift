@@ -77,14 +77,12 @@ extension MainDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let width = view.frame.width
         let cellWidth = (width - 50) / 2
         let cellHeight = cellWidth * 1.5
-//        print("width=\(cellWidth) , \(cellHeight)" )
+
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        selectCategory = categories[indexPath.item]
-//        performSegue(withIdentifier: "toEachFishSegue", sender: self)
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(identifier: "EachFishVC") as! EachFishVC
         

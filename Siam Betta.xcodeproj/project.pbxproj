@@ -17,6 +17,7 @@
 		1729B3AE237018BC00F0DC5C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B3AD237018BC00F0DC5C /* Category.swift */; };
 		1729B3B123701A3200F0DC5C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B3AF23701A3200F0DC5C /* CategoryCell.swift */; };
 		1729B3B223701A3200F0DC5C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1729B3B023701A3200F0DC5C /* CategoryCell.xib */; };
+		172A1274237DA66E0010A0FF /* VisionmodelSec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 172A1273237DA66D0010A0FF /* VisionmodelSec.mlmodel */; };
 		172BDE50236AB220005AC1C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE4F236AB220005AC1C7 /* AppDelegate.swift */; };
 		172BDE52236AB220005AC1C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE51236AB220005AC1C7 /* SceneDelegate.swift */; };
 		172BDE54236AB220005AC1C7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172BDE53236AB220005AC1C7 /* HomeVC.swift */; };
@@ -65,6 +66,7 @@
 		1729B3AD237018BC00F0DC5C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1729B3AF23701A3200F0DC5C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1729B3B023701A3200F0DC5C /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		172A1273237DA66D0010A0FF /* VisionmodelSec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VisionmodelSec.mlmodel; sourceTree = "<group>"; };
 		172BDE4C236AB220005AC1C7 /* Siam Betta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siam Betta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		172BDE4F236AB220005AC1C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		172BDE51236AB220005AC1C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				173479D3236B1DF300DB73B0 /* Visionmodel.mlmodel */,
+				172A1273237DA66D0010A0FF /* VisionmodelSec.mlmodel */,
 				172BDE64236AB25B005AC1C7 /* Shared */,
 				172BDE4E236AB220005AC1C7 /* Siam Betta */,
 				172BDE4D236AB220005AC1C7 /* Products */,
@@ -450,6 +453,7 @@
 				173479D0236AFCF000DB73B0 /* restImageVC.swift in Sources */,
 				1729B3B123701A3200F0DC5C /* CategoryCell.swift in Sources */,
 				1729B3AE237018BC00F0DC5C /* Category.swift in Sources */,
+				172A1274237DA66E0010A0FF /* VisionmodelSec.mlmodel in Sources */,
 				172949E72373160800E86417 /* DiscoveryConstant.swift in Sources */,
 				1726E81A236BFCA300F5AB2E /* Alert.swift in Sources */,
 				172DDD0C237BFAB2007746F3 /* GradintbgVC.swift in Sources */,

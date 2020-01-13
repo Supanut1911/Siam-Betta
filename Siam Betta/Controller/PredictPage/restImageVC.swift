@@ -35,7 +35,7 @@ class restImageVC: UIViewController {
     
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            let model = try VNCoreMLModel(for: Visionmodel().model)
+            let model = try VNCoreMLModel(for: VisionmodelSec().model)
             
             let request = VNCoreMLRequest(model: model, completionHandler: { (request, error) in
                 self.processClassification(for: request, error: error)
@@ -61,7 +61,6 @@ class restImageVC: UIViewController {
             let topClassifications = classification.prefix(1)
             let secClassifications = classification.prefix(2)
             let descriptions = topClassifications.map { classification -> String in
-//                print("-------->\(classification.identifier)")
                 predictResult = classification.identifier
                 
                 print(">>>>> \(secPredictResult)")
@@ -113,7 +112,7 @@ class restImageVC: UIViewController {
         updateClassification(for: image)
         //ดักเมื่อใช้รูปที่ไม่ใช่ปลากัด , code comment เพื่อใช้ test
         if predictResult == "It's not Betta fish"{
-            Alert.showAlert(on: self, with: "เกิดข้อผิดพลาด", message: "ไม่พบปลากัด")
+            Alert.showAlert(on: self, with: "", message: "ไม่พบปลากัด")
         } else {
             performSegue(withIdentifier: "toPopupDetailFish", sender: self)
         }
