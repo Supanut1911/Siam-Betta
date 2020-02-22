@@ -17,18 +17,18 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     var backCamera: AVCaptureDevice?
     var frontCamera: AVCaptureDevice?
     var currentCamera: AVCaptureDevice?
-    
+
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
-    
+
     var inputImage: UIImage!
-    
+
     let cameraManager = CameraManager()
-    
-    
+
+
     @IBOutlet weak var shutterBtn: UIButton!
     @IBOutlet weak var cameraView: UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCaptureSession()
@@ -37,16 +37,16 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         setipPreviewLayer()
         startRunningCaptureSession()
     }
-    
+
     func setupCaptureSession() {
            captureSession.sessionPreset = AVCaptureSession.Preset.photo
 
        }
-    
+
     func setupDevice() {
         let devicDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         let devices = devicDiscoverySession.devices
-        
+
         for device in devices {
             if device.position == AVCaptureDevice.Position.back {
                 backCamera = device
@@ -54,14 +54,14 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
                 frontCamera = device
             }
         }
-        
+
         currentCamera = backCamera
         cameraManager.addPreviewLayerToView(cameraView)
         cameraManager.shouldEnableTapToFocus = true
         cameraManager.shouldEnablePinchToZoom = true
 
     }
-    
+
     func setipPreviewLayer() {
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -69,11 +69,11 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         cameraPreviewLayer?.frame = self.view.frame
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
-    
+
     func startRunningCaptureSession() {
         captureSession.startRunning()
     }
-    
+
     func setupInputOutput() {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
@@ -85,10 +85,10 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             print("------->\(error)")
         }
     }
-    
- 
-    
-    
+
+
+
+
     @IBAction func shutterDidTap(_ sender: Any) {
         cameraManager.capturePictureWithCompletion { (result) in
             switch result {
@@ -100,32 +100,32 @@ class PredictVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             }
         }
     }
-    
+
     @IBAction func pickImageDidTap(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
         self.present(imagePicker, animated: true, completion: nil)
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
+
             self.performSegue(withIdentifier: "toRestPhotoSegue", sender: nil)
         }
         dismiss(animated: true, completion: nil)
-        
+
     }
-    
-    
-    
+
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "toRestPhotoSegue" {
              let imageVC = segue.destination as! restImageVC
              imageVC.image = self.inputImage
          }
      }
-    
+
 }
 
 

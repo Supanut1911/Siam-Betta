@@ -9,9 +9,13 @@
 import UIKit
 import Firebase
 import Kingfisher
+import TCProgressBar
 
 
-class PopupFishVC: UIViewController {
+
+class PopupFishVC: UIViewController{
+    
+    
 
     var predictFish: String = "defalut text"
     var secPredictFish: String = ""
@@ -30,11 +34,11 @@ class PopupFishVC: UIViewController {
     
     
     @IBOutlet weak var topFishName: UILabel!
-    @IBOutlet weak var topConfidenceLabel: UILabel!
+//    @IBOutlet weak var topConfidenceLabel: UILabel!
     
     
     @IBOutlet weak var secFishName: UILabel!
-    @IBOutlet weak var secConfidenceLabel: UILabel!
+//    @IBOutlet weak var secConfidenceLabel: UILabel!
     
     
     
@@ -45,7 +49,18 @@ class PopupFishVC: UIViewController {
     
     @IBOutlet weak var predictView: UIView!
     
-    @IBOutlet weak var bgView: UIImageView!
+//    @IBOutlet weak var bgView: UIImageView!
+    
+    
+    @IBOutlet weak var predictFishnameView: UIView!
+    @IBOutlet weak var progressBarView: UIView!
+    
+    
+//    @IBOutlet weak var progressView: TCProgressBar!
+    
+    @IBOutlet weak var progressView: TCProgressBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,33 +76,41 @@ class PopupFishVC: UIViewController {
     }
     
     func setUp() {
-        self.bgView.setGradientBackground(colorOne: UIColor.OceanBlue, colorTwo: UIColor.LightOrange)
+//        self.bgView.setGradientBackground(colorOne: UIColor.OceanBlue, colorTwo: UIColor.LightOrange)
         predictLabel.text = predictFish
         topFishName.text = predictFish
         secFishName.text = secPredictFish
         imageFromTaking.image = takePhotoImage
-        topConfidenceLabel.text = String(format: "%.2f",predictPercen)
+//        topConfidenceLabel.text = String(format: "%.2f",predictPercen)
             
-        secConfidenceLabel.text = String(format: "%.2f",secPredictPercen * 100)
+//        secConfidenceLabel.text = String(format: "%.2f",secPredictPercen * 100)
 
-
+        print(predictPercen / 100)
+        
+        self.progressView.value = CGFloat(predictPercen / 100)
+        
         setupView()
     }
     
     
     // setUP about View
     func setupView() {
-        predictView.layer.cornerRadius = 25
-        predictView.layer.shadowColor = AppColors.PINK.cgColor
+        predictView.layer.cornerRadius = 20
+        predictView.layer.shadowColor = #colorLiteral(red: 0.09148786217, green: 0.05746849626, blue: 0.1341616511, alpha: 1)
         predictView.layer.shadowOpacity = 0.4
         predictView.layer.shadowOffset = CGSize.zero
         predictView.layer.shadowRadius = 4
         
-        descriptionFishDetailView.layer.cornerRadius = 15
+        predictFishnameView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        progressBarView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+//        descriptionFishDetailView.layer.cornerRadius = 15
         descriptionFishDetailView.layer.shadowColor = UIColor.black.cgColor
         descriptionFishDetailView.layer.shadowOpacity = 0.4
         descriptionFishDetailView.layer.shadowOffset = CGSize.zero
         descriptionFishDetailView.layer.shadowRadius = 4
+        
 
     }
     
@@ -174,5 +197,7 @@ class PopupFishVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+
     
+   
 }

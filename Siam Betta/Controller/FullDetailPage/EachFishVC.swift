@@ -107,6 +107,7 @@ class EachFishVC: UIViewController {
             tailFinImageView.kf.setImage(with: url)
         }
         tailFinDetailLabel.text = self.tailFinDetail
+   
         
         detailLabel.text = detail
         bodyDetailLabel.text = bodyDetail

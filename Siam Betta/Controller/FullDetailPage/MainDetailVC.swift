@@ -14,7 +14,6 @@ class MainDetailVC: UIViewController {
     
     //var
     var categories = [Category]()
-//    var documentDocs = [DiscoveryDoc]()
     var selectCategory: Category!
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,26 +23,11 @@ class MainDetailVC: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-//        let category = Category.init(name: "halfmoon", imgUrl: "https://www.petstock.com.au/images/cache/product_feature/images/products/5c3437611b41b5.08627595.jpeg")
-//        categories.append(category)
-        
         collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
-        
-//        fetchDoucument()
         fetchCollection()
     }
     
-//    func fetchDoucument() {
-//        let docRef = Firestore.firestore().collection("discovery").document("Halfmoon")
-//        docRef.getDocument { (snap, error) in
-//            guard let data = snap?.data() else {return}
-//            let newCategory = Category.init(data: data)
-//            self.categories.append(newCategory)
-//            self.collectionView.reloadData()
-//        }
-//    }
-//
+
     func fetchCollection() {
         let collectionRef = Firestore.firestore().collection("discovery")
         collectionRef.getDocuments { (snap, error) in
