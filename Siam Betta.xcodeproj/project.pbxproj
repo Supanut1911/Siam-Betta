@@ -59,7 +59,8 @@
 		17358B8323CC340B003AE0F5 /* CaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17358B8223CC340B003AE0F5 /* CaptureVC.swift */; };
 		17358B8523CC343F003AE0F5 /* FishDetectionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17358B8423CC343F003AE0F5 /* FishDetectionVc.swift */; };
 		173A641223E5596E00717D3D /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A641123E5596E00717D3D /* IntroVC.swift */; };
-		174CB6BA23F1ADC0007E732E /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		174CB6BA23F1ADC0007E732E /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17752B212404181200097DD4 /* Sriracha-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17752B202404181200097DD4 /* Sriracha-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				174CB6BA23F1ADC0007E732E /* BuildFile in Embed Frameworks */,
+				174CB6BA23F1ADC0007E732E /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +133,7 @@
 		173A641123E5596E00717D3D /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		174CB6BC23F1AE1B007E732E /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		174CB6BF23F1BA81007E732E /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17752B202404181200097DD4 /* Sriracha-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sriracha-Regular.ttf"; sourceTree = "<group>"; };
 		9F728CCEE60A1B3D62822018 /* Pods_Siam_Betta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siam_Betta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57539657B77A8AA3F33657D /* Pods-Siam Betta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.debug.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.debug.xcconfig"; sourceTree = "<group>"; };
 		C80CFBD23B3550BF0B51FA17 /* Pods-Siam Betta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.release.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +243,8 @@
 		173082BC236D6D0300C3E18B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				17752B1F2404181200097DD4 /* Sriracha */,
+				17752B1E240417D500097DD4 /* New Group */,
 				173082BD236D6D2C00C3E18B /* Kanit */,
 			);
 			path = fonts;
@@ -348,6 +352,22 @@
 			path = ObjectDetectionPage;
 			sourceTree = "<group>";
 		};
+		17752B1E240417D500097DD4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		17752B1F2404181200097DD4 /* Sriracha */ = {
+			isa = PBXGroup;
+			children = (
+				17752B202404181200097DD4 /* Sriracha-Regular.ttf */,
+			);
+			name = Sriracha;
+			path = font/Sriracha;
+			sourceTree = SOURCE_ROOT;
+		};
 		17B7721423CE223000FF0827 /* ObjectDetectionModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +450,7 @@
 				173082D1236D6D2C00C3E18B /* Kanit-ExtraLight.ttf in Resources */,
 				173082DD236D6D2C00C3E18B /* Kanit-SemiBoldItalic.ttf in Resources */,
 				173082E0236D6D2C00C3E18B /* Kanit-Light.ttf in Resources */,
+				17752B212404181200097DD4 /* Sriracha-Regular.ttf in Resources */,
 				173082E3236D6D2C00C3E18B /* Kanit-Medium.ttf in Resources */,
 				173082D8236D6D2C00C3E18B /* Kanit-MediumItalic.ttf in Resources */,
 				173082D7236D6D2C00C3E18B /* Kanit-Italic.ttf in Resources */,

@@ -16,11 +16,18 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
     var imageName: [String] = []
     var fishName = ""
     var db = Firestore.firestore()
+    var selectCategory: Category!
+    var categories = [Category]()
     
     
     @IBOutlet weak var fishNameView: UIView!
     
+    @IBOutlet weak var retryView: UIView!
+    @IBOutlet weak var fowardView: UIView!
+    
     @IBOutlet weak var fishNameLabel: UILabel!
+    @IBOutlet weak var retryBtn: UIButton!
+    @IBOutlet weak var forwardBtn: UIButton!
     
     
     @IBOutlet weak var pagerView: FSPagerView!{
@@ -40,18 +47,19 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
         setUpShadow()
         fetchDocument()
         self.fishNameLabel.text = fishName
-        
+        fetchCollection()
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return imageName.count
+        
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         for i in 0...4 {
             if let url = URL(string: self.imageName[index]) {
-                
+
                 cell.imageView?.kf.setImage(with: url)
             }
         }
@@ -63,10 +71,22 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
     }
     
     func setUpShadow () {
-        fishNameView.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        fishNameView.layer.shadowOpacity = 1
-        fishNameView.layer.shadowOffset = .zero
-        fishNameView.layer.shadowRadius = 10
+//        fishNameView.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+//        fishNameView.layer.shadowOpacity = 1
+//        fishNameView.layer.shadowOffset = .zero
+//        fishNameView.layer.shadowRadius = 10
+        
+        
+        retryBtn.layer.cornerRadius = 15
+        retryBtn.layer.maskedCorners = [.layerMinXMaxYCorner]
+        retryView.layer.cornerRadius = 15
+        retryView.layer.maskedCorners = [.layerMinXMaxYCorner]
+        
+        forwardBtn.layer.cornerRadius = 15
+        forwardBtn.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        fowardView.layer.cornerRadius = 15
+        fowardView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        
     }
     
     func fetchDocument () {
@@ -77,11 +97,13 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 let fishDetail = data["detail"] as! String ?? ""
                 self.fishDetailLabel.text = fishDetail
                 
-                let fishImage = data["imageUrl"] as! String ?? ""
-                
-//                if let url = URL(string: fishImage) {
-//                    self.imageView.kf.setImage(with: url)
-//                }
+//                let fishImage = data["imageUrl"] as! String ?? ""
+                self.imageName.append(data["imageUrl1"] as! String)
+                self.imageName.append(data["imageUrl2"] as! String)
+                self.imageName.append(data["imageUrl3"] as! String)
+                DispatchQueue.main.async(execute: {
+                    self.pagerView.reloadData()
+                })
             }
         }
         
@@ -91,6 +113,12 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 guard let data = snap?.data() else { return }
                 let fishDetail = data["detail"] as! String ?? ""
                 self.fishDetailLabel.text = fishDetail
+                self.imageName.append(data["imageUrl1"] as! String)
+                self.imageName.append(data["imageUrl2"] as! String)
+                self.imageName.append(data["imageUrl3"] as! String)
+                DispatchQueue.main.async(execute: {
+                    self.pagerView.reloadData()
+                })
             }
         }
         
@@ -100,6 +128,12 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 guard let data = snap?.data() else { return }
                 let fishDetail = data["detail"] as! String ?? ""
                 self.fishDetailLabel.text = fishDetail
+                self.imageName.append(data["imageUrl1"] as! String)
+                self.imageName.append(data["imageUrl2"] as! String)
+                self.imageName.append(data["imageUrl3"] as! String)
+                DispatchQueue.main.async(execute: {
+                    self.pagerView.reloadData()
+                })
             }
         }
             
@@ -110,11 +144,13 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 let fishDetail = data["detail"] as! String ?? ""
                 self.fishDetailLabel.text = fishDetail
                 
-                let fishImage = data["imageUrl"] as! String ?? ""
+                self.imageName.append(data["imageUrl1"] as! String)
+                self.imageName.append(data["imageUrl2"] as! String)
+                self.imageName.append(data["imageUrl3"] as! String)
+                DispatchQueue.main.async(execute: {
+                    self.pagerView.reloadData()
+                })
                 
-//                if let url = URL(string: fishImage) {
-//                    self.imageView.kf.setImage(with: url)
-//                }
             }
         }
         
@@ -128,14 +164,8 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 self.imageName.append(data["imageUrl3"] as! String)
                 self.fishDetailLabel.text = fishDetail
                 
-                print("run here \(self.imageName)")
-                
                 DispatchQueue.main.async(execute: {
-                    //perform all the UI updates on the main queue
                     self.pagerView.reloadData()
-                    for i in 0...2 {
-                        print(">>> \(self.imageName[i])")
-                    }
                 })
                 
             }
@@ -147,8 +177,94 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
                 guard let data = snap?.data() else { return }
                 let fishDetail = data["detail"] as! String ?? ""
                 self.fishDetailLabel.text = fishDetail
+                self.imageName.append(data["imageUrl1"] as! String)
+                self.imageName.append(data["imageUrl2"] as! String)
+                self.imageName.append(data["imageUrl3"] as! String)
+                self.fishDetailLabel.text = fishDetail
+                
+                DispatchQueue.main.async(execute: {
+                    self.pagerView.reloadData()
+                })
             }
         }
     }
     
+    func fetchCollection() {
+        let collectionRef = Firestore.firestore().collection("discovery")
+        collectionRef.getDocuments { (snap, error) in
+            guard let documents = snap?.documents else {return}
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+//                self.collectionView.reloadData()
+            }
+            
+        }
+    }
+    
+    @IBAction func didTabRetry(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapGo(_ sender: Any) {
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = mainStoryboard.instantiateViewController(identifier: "EachFishVC") as! EachFishVC
+        
+        if (fishName == "Bigear Betta") {
+              checkSpecies(0)
+        }
+        
+        else if (fishName == "Crowntail Betta") {
+                checkSpecies(1)
+        }
+        
+        else if (fishName == "Doubletail Betta") {
+                checkSpecies(2)
+        }
+        
+        else if (fishName == "Halfmoon Betta") {
+                checkSpecies(3)
+        }
+        
+        else if (fishName == "Viltail Betta") {
+                checkSpecies(4)
+        }
+        
+        else {
+                checkSpecies(5)
+        }
+    }
+    
+    func checkSpecies(_ fishIndex: Int) {
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = mainStoryboard.instantiateViewController(identifier: "EachFishVC") as! EachFishVC
+        desVC.image = categories[fishIndex].imgUrl
+        desVC.fishName = categories[fishIndex].name
+        desVC.detail = categories[fishIndex].detail
+            
+        desVC.bodyImageUrl = categories[fishIndex].bodyImageUrl
+        desVC.bodyDetail = categories[fishIndex].bodyDetail
+            
+        desVC.backFinImageUrl = categories[fishIndex].backFinImage
+        desVC.backFinDetail = categories[fishIndex].backFinDetail
+        
+        desVC.paunchFinImageUrl = categories[fishIndex].paunchFinImage
+        desVC.paunchFinDetail = categories[fishIndex].paunchFinDetail
+            
+        desVC.tailFinImageUrl = categories[fishIndex].tailFinImage
+        desVC.tailFinDetail = categories[fishIndex].tailFinDetail
+        
+        self.navigationController?.pushViewController(desVC, animated: true)
+        present(desVC, animated: true, completion: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEachFishSegue" {
+            if let destination = segue.destination as? EachFishVC {
+                destination.category = selectCategory
+            }
+        }
+    }
 }

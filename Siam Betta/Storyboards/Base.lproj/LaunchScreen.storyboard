@@ -27,11 +27,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siam Betta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sW-nx-KBq">
-                                        <rect key="frame" x="141.5" y="556" width="131" height="29"/>
+                                        <rect key="frame" x="141.5" y="651" width="131" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="miC-YJ-k2g"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -40,7 +40,7 @@
                                 <constraints>
                                     <constraint firstItem="nsF-mh-4XH" firstAttribute="centerY" secondItem="n7A-e1-KrF" secondAttribute="centerY" id="SBo-PB-RX8"/>
                                     <constraint firstItem="3sW-nx-KBq" firstAttribute="centerX" secondItem="n7A-e1-KrF" secondAttribute="centerX" id="Xqf-IK-qJh"/>
-                                    <constraint firstAttribute="bottom" secondItem="3sW-nx-KBq" secondAttribute="bottom" constant="311" id="YRY-yE-qH1"/>
+                                    <constraint firstAttribute="bottom" secondItem="3sW-nx-KBq" secondAttribute="bottom" constant="200" id="YRY-yE-qH1"/>
                                     <constraint firstItem="nsF-mh-4XH" firstAttribute="centerX" secondItem="n7A-e1-KrF" secondAttribute="centerX" id="b7s-Lu-78m"/>
                                     <constraint firstItem="nsF-mh-4XH" firstAttribute="centerY" secondItem="n7A-e1-KrF" secondAttribute="centerY" id="ouM-jf-Idg"/>
                                     <constraint firstItem="nsF-mh-4XH" firstAttribute="centerX" secondItem="n7A-e1-KrF" secondAttribute="centerX" id="wBH-AK-1w6"/>
