@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02648F5B02F9553661DFB695 /* Pods_Siam_Betta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F728CCEE60A1B3D62822018 /* Pods_Siam_Betta.framework */; };
 		17062AB423DDCEDF00810515 /* TabbedBettaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17062AB323DDCEDF00810515 /* TabbedBettaVC.swift */; };
 		1713ADDB23E80E6100154532 /* BettaDetection 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1713ADDA23E80E6100154532 /* BettaDetection 1.mlmodel */; };
 		1726E81A236BFCA300F5AB2E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726E819236BFCA300F5AB2E /* Alert.swift */; };
@@ -28,6 +27,10 @@
 		172BDE57236AB220005AC1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE55236AB220005AC1C7 /* Main.storyboard */; };
 		172BDE59236AB225005AC1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE58236AB225005AC1C7 /* Assets.xcassets */; };
 		172BDE5C236AB225005AC1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172BDE5A236AB225005AC1C7 /* LaunchScreen.storyboard */; };
+		172C3A742441CC7200C16064 /* ReferenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C3A732441CC7200C16064 /* ReferenceVC.swift */; };
+		172C3A762441D1AE00C16064 /* WebViewLink1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C3A752441D1AE00C16064 /* WebViewLink1.swift */; };
+		172C3A782441D1C000C16064 /* WebViewLink2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C3A772441D1C000C16064 /* WebViewLink2VC.swift */; };
+		172C3A7A2441D1CD00C16064 /* WebViewLink3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172C3A792441D1CD00C16064 /* WebViewLink3VC.swift */; };
 		172DDD0C237BFAB2007746F3 /* GradintbgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DDD0B237BFAB2007746F3 /* GradintbgVC.swift */; };
 		173082D1236D6D2C00C3E18B /* Kanit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082BE236D6D2C00C3E18B /* Kanit-ExtraLight.ttf */; };
 		173082D2236D6D2C00C3E18B /* Kanit-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082BF236D6D2C00C3E18B /* Kanit-ThinItalic.ttf */; };
@@ -49,6 +52,7 @@
 		173082E2236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082CF236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf */; };
 		173082E3236D6D2C00C3E18B /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173082D0236D6D2C00C3E18B /* Kanit-Medium.ttf */; };
 		173082E7236D7AF800C3E18B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173082E6236D7AF800C3E18B /* CustomTabBar.swift */; };
+		1730E60B241F8EEA00D5627C /* ImproveeColorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1730E60A241F8EEA00D5627C /* ImproveeColorVC.swift */; };
 		173479C1236ABC8D00DB73B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 173479C0236ABC8D00DB73B0 /* GoogleService-Info.plist */; };
 		173479C8236AC0F900DB73B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173479C7236AC0F900DB73B0 /* Constants.swift */; };
 		173479CB236AC2C400DB73B0 /* RounderViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173479CA236AC2C400DB73B0 /* RounderViews.swift */; };
@@ -60,7 +64,12 @@
 		17358B8523CC343F003AE0F5 /* FishDetectionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17358B8423CC343F003AE0F5 /* FishDetectionVc.swift */; };
 		173A641223E5596E00717D3D /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A641123E5596E00717D3D /* IntroVC.swift */; };
 		174CB6BA23F1ADC0007E732E /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		176520E22417E6B6002C3B11 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176520E12417E6B6002C3B11 /* CategoryVC.swift */; };
+		176520E424190176002C3B11 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176520E324190176002C3B11 /* FoodVC.swift */; };
 		17752B212404181200097DD4 /* Sriracha-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17752B202404181200097DD4 /* Sriracha-Regular.ttf */; };
+		1793FE6D24226F6F00CECA12 /* PetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793FE6C24226F6F00CECA12 /* PetVC.swift */; };
+		1793FE6F2422869E00CECA12 /* BreedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793FE6E2422869E00CECA12 /* BreedVC.swift */; };
+		47F979280F75274157C9E7A0 /* Pods_Siam_Betta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E036F4B74FB815DF105F054 /* Pods_Siam_Betta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +109,10 @@
 		172BDE58236AB225005AC1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172BDE5B236AB225005AC1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		172BDE5D236AB225005AC1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172C3A732441CC7200C16064 /* ReferenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceVC.swift; sourceTree = "<group>"; };
+		172C3A752441D1AE00C16064 /* WebViewLink1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLink1.swift; sourceTree = "<group>"; };
+		172C3A772441D1C000C16064 /* WebViewLink2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLink2VC.swift; sourceTree = "<group>"; };
+		172C3A792441D1CD00C16064 /* WebViewLink3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLink3VC.swift; sourceTree = "<group>"; };
 		172DDD0B237BFAB2007746F3 /* GradintbgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradintbgVC.swift; sourceTree = "<group>"; };
 		173082BE236D6D2C00C3E18B /* Kanit-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLight.ttf"; sourceTree = "<group>"; };
 		173082BF236D6D2C00C3E18B /* Kanit-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -121,6 +134,7 @@
 		173082CF236D6D2C00C3E18B /* Kanit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		173082D0236D6D2C00C3E18B /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
 		173082E6236D7AF800C3E18B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		1730E60A241F8EEA00D5627C /* ImproveeColorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImproveeColorVC.swift; sourceTree = "<group>"; };
 		173479C0236ABC8D00DB73B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		173479C7236AC0F900DB73B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		173479CA236AC2C400DB73B0 /* RounderViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RounderViews.swift; sourceTree = "<group>"; };
@@ -133,10 +147,14 @@
 		173A641123E5596E00717D3D /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		174CB6BC23F1AE1B007E732E /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		174CB6BF23F1BA81007E732E /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		176520E12417E6B6002C3B11 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		176520E324190176002C3B11 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		17752B202404181200097DD4 /* Sriracha-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sriracha-Regular.ttf"; sourceTree = "<group>"; };
-		9F728CCEE60A1B3D62822018 /* Pods_Siam_Betta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siam_Betta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C57539657B77A8AA3F33657D /* Pods-Siam Betta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.debug.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.debug.xcconfig"; sourceTree = "<group>"; };
-		C80CFBD23B3550BF0B51FA17 /* Pods-Siam Betta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.release.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.release.xcconfig"; sourceTree = "<group>"; };
+		1793FE6C24226F6F00CECA12 /* PetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVC.swift; sourceTree = "<group>"; };
+		1793FE6E2422869E00CECA12 /* BreedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVC.swift; sourceTree = "<group>"; };
+		26FD477DD2F5E8933A663EEA /* Pods-Siam Betta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.debug.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.debug.xcconfig"; sourceTree = "<group>"; };
+		52A1B3A7AB34DC323B507355 /* Pods-Siam Betta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siam Betta.release.xcconfig"; path = "Target Support Files/Pods-Siam Betta/Pods-Siam Betta.release.xcconfig"; sourceTree = "<group>"; };
+		9E036F4B74FB815DF105F054 /* Pods_Siam_Betta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siam_Betta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02648F5B02F9553661DFB695 /* Pods_Siam_Betta.framework in Frameworks */,
+				47F979280F75274157C9E7A0 /* Pods_Siam_Betta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +174,7 @@
 			children = (
 				174CB6BF23F1BA81007E732E /* CameraManager.framework */,
 				174CB6BC23F1AE1B007E732E /* CameraManager.framework */,
-				9F728CCEE60A1B3D62822018 /* Pods_Siam_Betta.framework */,
+				9E036F4B74FB815DF105F054 /* Pods_Siam_Betta.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,6 +258,17 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		172C3A722441CC5A00C16064 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				172C3A732441CC7200C16064 /* ReferenceVC.swift */,
+				172C3A752441D1AE00C16064 /* WebViewLink1.swift */,
+				172C3A772441D1C000C16064 /* WebViewLink2VC.swift */,
+				172C3A792441D1CD00C16064 /* WebViewLink3VC.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
 		173082BC236D6D0300C3E18B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,9 +309,11 @@
 			isa = PBXGroup;
 			children = (
 				172BDE53236AB220005AC1C7 /* HomeVC.swift */,
+				172C3A722441CC5A00C16064 /* Reference */,
 				173479CC236AFB3400DB73B0 /* PredictPage */,
 				1729B3AA237012EE00F0DC5C /* FullDetailPage */,
 				17358B8123CC33DC003AE0F5 /* ObjectDetectionPage */,
+				176520E02417E676002C3B11 /* Knowledge */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +383,18 @@
 			path = ObjectDetectionPage;
 			sourceTree = "<group>";
 		};
+		176520E02417E676002C3B11 /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				176520E12417E6B6002C3B11 /* CategoryVC.swift */,
+				176520E324190176002C3B11 /* FoodVC.swift */,
+				1730E60A241F8EEA00D5627C /* ImproveeColorVC.swift */,
+				1793FE6C24226F6F00CECA12 /* PetVC.swift */,
+				1793FE6E2422869E00CECA12 /* BreedVC.swift */,
+			);
+			path = Knowledge;
+			sourceTree = "<group>";
+		};
 		17752B1E240417D500097DD4 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,8 +422,8 @@
 		EE7866C111129E0DDDAE608D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C57539657B77A8AA3F33657D /* Pods-Siam Betta.debug.xcconfig */,
-				C80CFBD23B3550BF0B51FA17 /* Pods-Siam Betta.release.xcconfig */,
+				26FD477DD2F5E8933A663EEA /* Pods-Siam Betta.debug.xcconfig */,
+				52A1B3A7AB34DC323B507355 /* Pods-Siam Betta.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -392,12 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 172BDE60236AB225005AC1C7 /* Build configuration list for PBXNativeTarget "Siam Betta" */;
 			buildPhases = (
-				8E893342ED5B5CC77B906FED /* [CP] Check Pods Manifest.lock */,
+				3C8BE3448595D90B75C29A5E /* [CP] Check Pods Manifest.lock */,
 				172BDE48236AB220005AC1C7 /* Sources */,
 				172BDE49236AB220005AC1C7 /* Frameworks */,
 				172BDE4A236AB220005AC1C7 /* Resources */,
 				174CB6BB23F1ADC0007E732E /* Embed Frameworks */,
-				E1894B20DDED1B470C7DA164 /* [CP] Embed Pods Frameworks */,
+				189AA3FC0DBE43D1F6603B05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -477,7 +520,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8E893342ED5B5CC77B906FED /* [CP] Check Pods Manifest.lock */ = {
+		189AA3FC0DBE43D1F6603B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C8BE3448595D90B75C29A5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,23 +559,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1894B20DDED1B470C7DA164 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Siam Betta/Pods-Siam Betta-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -526,21 +569,30 @@
 				17358B8523CC343F003AE0F5 /* FishDetectionVc.swift in Sources */,
 				1726E81F236D4CAF00F5AB2E /* UIcolor.swift in Sources */,
 				172BDE54236AB220005AC1C7 /* HomeVC.swift in Sources */,
+				1793FE6F2422869E00CECA12 /* BreedVC.swift in Sources */,
 				172BDE50236AB220005AC1C7 /* AppDelegate.swift in Sources */,
 				173082E7236D7AF800C3E18B /* CustomTabBar.swift in Sources */,
+				1730E60B241F8EEA00D5627C /* ImproveeColorVC.swift in Sources */,
 				173A641223E5596E00717D3D /* IntroVC.swift in Sources */,
 				172BDE52236AB220005AC1C7 /* SceneDelegate.swift in Sources */,
 				173479D2236B095B00DB73B0 /* PopupFishVC.swift in Sources */,
 				173479C8236AC0F900DB73B0 /* Constants.swift in Sources */,
+				172C3A742441CC7200C16064 /* ReferenceVC.swift in Sources */,
+				176520E424190176002C3B11 /* FoodVC.swift in Sources */,
+				172C3A762441D1AE00C16064 /* WebViewLink1.swift in Sources */,
 				173479CE236AFB4E00DB73B0 /* PredictVC.swift in Sources */,
 				1729B3AC2370133800F0DC5C /* MainDetailVC.swift in Sources */,
+				172C3A782441D1C000C16064 /* WebViewLink2VC.swift in Sources */,
 				173479CB236AC2C400DB73B0 /* RounderViews.swift in Sources */,
 				173479D0236AFCF000DB73B0 /* restImageVC.swift in Sources */,
 				1729B3B123701A3200F0DC5C /* CategoryCell.swift in Sources */,
+				176520E22417E6B6002C3B11 /* CategoryVC.swift in Sources */,
 				1729B3AE237018BC00F0DC5C /* Category.swift in Sources */,
 				17062AB423DDCEDF00810515 /* TabbedBettaVC.swift in Sources */,
 				172A1274237DA66E0010A0FF /* VisionmodelSec.mlmodel in Sources */,
 				172949E72373160800E86417 /* DiscoveryConstant.swift in Sources */,
+				1793FE6D24226F6F00CECA12 /* PetVC.swift in Sources */,
+				172C3A7A2441D1CD00C16064 /* WebViewLink3VC.swift in Sources */,
 				1726E81A236BFCA300F5AB2E /* Alert.swift in Sources */,
 				172DDD0C237BFAB2007746F3 /* GradintbgVC.swift in Sources */,
 				172949E9237325B400E86417 /* EachFishVC.swift in Sources */,
@@ -693,11 +745,11 @@
 		};
 		172BDE61236AB225005AC1C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C57539657B77A8AA3F33657D /* Pods-Siam Betta.debug.xcconfig */;
+			baseConfigurationReference = 26FD477DD2F5E8933A663EEA /* Pods-Siam Betta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QD4KUK365R;
+				DEVELOPMENT_TEAM = 58HC8X8NPP;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Siam Betta/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -706,7 +758,7 @@
 					"@executable_path/Frameworks",
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "supanut.inc.Siam-Betta";
+				PRODUCT_BUNDLE_IDENTIFIER = "cocdev.inc.Siam-Betta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -715,11 +767,11 @@
 		};
 		172BDE62236AB225005AC1C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C80CFBD23B3550BF0B51FA17 /* Pods-Siam Betta.release.xcconfig */;
+			baseConfigurationReference = 52A1B3A7AB34DC323B507355 /* Pods-Siam Betta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QD4KUK365R;
+				DEVELOPMENT_TEAM = 58HC8X8NPP;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Siam Betta/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -727,7 +779,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "supanut.inc.Siam-Betta";
+				PRODUCT_BUNDLE_IDENTIFIER = "cocdev.inc.Siam-Betta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

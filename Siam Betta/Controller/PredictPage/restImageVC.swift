@@ -18,11 +18,16 @@ class restImageVC: UIViewController {
     var myPercen = [Double]()
     var predictResult: String = ""
     var secPredictResult: String = ""
+    var thirdPredictResult: String = ""
+
     var predictPercentage: Double = 0.0
     var topClassificationsFish = ""
     var secClassificationsFish = ""
+    var thirdClassificationsFish = ""
+    
     var topPercen = 0.0
     var secPercen = 0.0
+    var thirdPercen = 0.0
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -60,6 +65,8 @@ class restImageVC: UIViewController {
         } else {
             let topClassifications = classification.prefix(1)
             let secClassifications = classification.prefix(2)
+            let thirdClassifications = classification.prefix(3)
+            
             let descriptions = topClassifications.map { classification -> String in
                 predictResult = classification.identifier
                 
@@ -77,12 +84,24 @@ class restImageVC: UIViewController {
                 return ""
             }
             
+            let y = thirdClassifications.map { (classification) -> String in
+                            thirdPredictResult = classification.identifier
+                            myResult.append(classification.identifier)
+            //                let confidencee = Double(classification.confidence * 100)
+                            myPercen.append(Double(classification.confidence))
+                            return ""
+                        }
+            
+            
+            
             self.topClassificationsFish = myResult[0]
             self.secClassificationsFish = myResult[1]
+            self.thirdClassificationsFish = myResult[2]
             self.topPercen = myPercen[0]
             self.secPercen = myPercen[1]
+            self.thirdPercen = myPercen[2]
             
-            print("1st: \(topPercen) , 2nd: \(secPercen)")
+            print("1st: \(topPercen) , 2nd: \(secPercen), 3rd: \(thirdPercen)" )
             
         }
     }
@@ -126,8 +145,16 @@ class restImageVC: UIViewController {
         print("before pass: \(self.predictResult)")
         popup.predictFish = self.predictResult
         popup.predictPercen = self.predictPercentage
+        
+        
         popup.takePhotoImage = self.image
+        
+        
         popup.secPredictFish = self.secClassificationsFish
         popup.secPredictPercen = self.secPercen
+        
+        
+        popup.thirdPredictFish = self.thirdClassificationsFish
+        popup.thirdPredictPercen = self.thirdPercen
     }
 }

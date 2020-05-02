@@ -19,6 +19,13 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
     var selectCategory: Category!
     var categories = [Category]()
     
+     fileprivate var alignmentIndex = 0 {
+            didSet {
+    //            self.pageControll.contentHorizontalAlignment = [.right,.center,.left][self.alignmentIndex]
+                self.pageControll.contentHorizontalAlignment = .right
+            }
+        }
+    
     
     @IBOutlet weak var fishNameView: UIView!
     
@@ -28,6 +35,17 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
     @IBOutlet weak var fishNameLabel: UILabel!
     @IBOutlet weak var retryBtn: UIButton!
     @IBOutlet weak var forwardBtn: UIButton!
+    
+    
+    @IBOutlet weak var pageControll: FSPageControl!{
+        didSet {
+            self.pageControll.numberOfPages = 3
+            self.pageControll.contentHorizontalAlignment = .left
+            self.pageControll.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            self.pageControll.hidesForSinglePage = true
+            self.pageControll.itemSpacing = 13
+        }
+    }
     
     
     @IBOutlet weak var pagerView: FSPagerView!{
@@ -43,11 +61,18 @@ class TabbedBettaVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pagerView.transformer = FSPagerViewTransformer(type: .depth)
+//        self.pagerView.transformer = FSPagerViewTransformer(type: .depth)
         setUpShadow()
         fetchDocument()
         self.fishNameLabel.text = fishName
         fetchCollection()
+    }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        DispatchQueue.main.async(execute: {
+            self.pageControll.currentPage = targetIndex
+            self.pagerView.reloadData()
+        })
     }
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {

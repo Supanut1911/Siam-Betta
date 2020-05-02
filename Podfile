@@ -15,6 +15,8 @@ def shared_pods
   	pod 'FSPagerView'
   	pod 'MultiProgressView'
   	pod 'TCProgressBar'
+    pod 'YouTubePlayer'
+    pod 'Charts'
 end
 
 
